@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="t.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+    <title> Quotation Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="h1">Drone Survey Quotation Calculator</h1>
+        <label for="hectares">Enter Number of Hectares:</label>
+        <input type="number" id="hectares" min="0" step="10">
+        <button onclick="calculatePrice()">Calculate Price</button><br>
+        <!-- <input type="checkbox" id="drawCheckbox" onchange="toggleDrawing()"> Enable Drawing
+        <button id="exportBtn" style="margin-left:2%;" onclick="exportKML()">Export KML</button>
+        <input type="file" id="fileInput" style="margin-left:0%;" accept=".kml">
+        <button id="uploadButton" style="margin-trim:15%;" onclick="processKML()">Upload KML</button> -->
+        <input type="checkbox" id="drawCheckbox" onchange="toggleDrawing()"> Enable Drawing
+        <button id="exportBtn" onclick="exportKML()">Export KML</button>
+        <input type="file" id="fileInput" accept=".kml">
+        <button id="uploadButton" onclick="processKML()">Upload KML</button><br>
+        <input type="checkbox" id="dgps" onclick="Dgps()"> <u><i><b>D.G.P.S</b></i></u>
+        <p id="quotation">Quotation: Rs 0.00</p><br>
+        <!-- -------------------------------------------------------------------------------------- -->
+        <h2>Technical Specification</h2>
+        <p id="para1">The no. of days to be taken for processing : <span id="rate2">0</span></p>
+        <p id="col1">The no. of days to be taken for data collection : <span id="rate1">0</span> </p>
+        <p id="no1">The no. of flights to be taken by drone : <span id="no">0</span></p>
+        <img id="img" src="t.png">
+    </div>
+
+    <div id="map-container"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+    <script src="https://unpkg.com/leaflet-omnivore/leaflet-omnivore.min.js"></script>
+    <script src="t.js"></script>
+</body>
+
+</html>

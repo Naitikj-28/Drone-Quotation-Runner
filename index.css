@@ -45,10 +45,6 @@ button {
     cursor: pointer;
 }
 
-/* button:hover {
-     background-color: #00ff08a9;
- } */
-
 #map-container {
     height: 600px;
     width: 50%;
@@ -63,7 +59,6 @@ button {
     position: relative;
     background: radial-gradient(circle at var(--hx) var(--hy), #4caf50 30%, #00ff08a9);
     color: #fff;
-    /* Keeps text color white */
     padding: 30px;
     border-radius: 1px;
     margin: 0;

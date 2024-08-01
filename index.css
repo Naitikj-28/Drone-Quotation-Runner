@@ -1,6 +1,5 @@
- body {
+ /* body {
      font-family: Arial, sans-serif;
-     /* background-color: #4caf50; */
      background: linear-gradient(to right, #00ff08a9, #4caf50, #00ff08a9);
      background-size: 300% 100%;
      animation: gradientMove 6s linear infinite;
@@ -47,8 +46,7 @@
      display: none;
  }
 
- /* ----------------------------------------------------------------------------------------------------------  */
- .container h1 {
+  .container h1 {
      background: linear-gradient(to right, #00ff08a9, #4caf50, #00ff08a9);
      background-size: 300% 100%;
      animation: gradientMove 6s linear infinite;
@@ -74,6 +72,130 @@
  }
 
 
+
+ #img {
+     height: 110px;
+     width: 110px;
+     margin-top: 9.5px;
+     margin-bottom: 10px;
+     display: block;
+ }
+
+ @media only screen and (min-width: 768px) {
+     .container {
+         width: 70%;
+     }
+
+     #map-container {
+         height: 600px;
+     }
+ }
+
+ @media only screen and (min-width: 1200px) {
+     .container {
+         width: 60%;
+     }
+ } */
+
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #00ff08a9;
+     margin: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     position: relative;
+     overflow: hidden;
+ }
+
+ body::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: radial-gradient(circle at var(--x) var(--y), #4caf50, #00ff08a9);
+     transition: background 0.3s ease-out;
+     pointer-events: none;
+ }
+
+ .container {
+     height: 565px;
+     width: 50%;
+     padding: 27px;
+     background-color: #fff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     z-index: 1;
+ }
+
+ input {
+     padding: 8px;
+     margin: 10px 0;
+ }
+
+ button {
+     padding: 10px;
+     background-color: #4caf50;
+     color: #fff;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ /* button:hover {
+     background-color: #00ff08a9;
+ } */
+
+ #map-container {
+     height: 600px;
+     width: 50%;
+     padding: 9.5px;
+ }
+
+ .leaflet-draw-toolbar {
+     display: none;
+ }
+
+ .container h1 {
+     position: relative;
+     background: radial-gradient(circle at var(--hx) var(--hy), #4caf50 30%, #00ff08a9);
+     color: #fff;
+     /* Keeps text color white */
+     padding: 30px;
+     border-radius: 1px;
+     margin: 0;
+     text-align: center;
+     z-index: 1;
+ }
+
+ .container h1::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: inherit;
+     transition: background 0.3s ease-out;
+     z-index: -1;
+     pointer-events: none;
+ }
+
+ @keyframes gradientMove {
+     0% {
+         background-position: 0% 0%;
+     }
+
+     50% {
+         background-position: 100% 0%;
+     }
+
+     100% {
+         background-position: 0% 0%;
+     }
+ }
 
  #img {
      height: 110px;

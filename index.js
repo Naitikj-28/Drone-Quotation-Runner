@@ -75,8 +75,6 @@ map.on('draw:created', function (e) {
 const hectaresInput = document.getElementById('hectares');
 const quotationElement = document.getElementById('quotation');
 function calculatePrice() {
-    // const hectaresInput = document.getElementById('hectares');
-    // const quotationElement = document.getElementById('quotation');
 
     const hectares = parseFloat(hectaresInput.value);
 
